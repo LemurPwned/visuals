@@ -15,12 +15,12 @@ class EventScrap(scrapy.Spider):
     name = "event"
 
     def start_requests(self):
-        year = 2019
-        month = 3
-        start_day = 10
-        stop_day = 10
+        year = 2015
+        month = 1
+        start_day = 1
+        stop_day = 30
         start_date = datetime.datetime(year, month, start_day)
-        end_date = datetime.datetime(year, month, stop_day)
+        end_date = datetime.datetime(year+4, month+11, stop_day)
         step = datetime.timedelta(days=1)
 
         base_url = 'http://www.krakow.pl/kalendarium/1919,shw,'
